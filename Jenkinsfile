@@ -44,8 +44,10 @@ pipeline {
             }
         }
         stage('Push to DockrHub') {
-            echo 'Pushing image to DockerHub'
-            sh 'docker push ezraone/ecommerce'
+            steps {
+                echo 'Push to DockerHub...'
+                sh 'docker push ezraone/ecommerce'
+            }
         }
     }
 }
