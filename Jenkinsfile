@@ -40,7 +40,7 @@ pipeline {
             steps {
                 echo 'Running Docker container...'
                 // Add your deploy steps here
-                sh 'docker run -d --name ez-ecommerce:v1 ezraone/ecommerce'
+                sh 'docker run -d -p 8010:80 ezraone/ecommerce'
             }
         }
         stage('Push to DockerHub') {
