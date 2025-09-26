@@ -43,7 +43,7 @@ pipeline {
                 sh 'docker run -d --name ez-ecommerce ezraone/ecommerce'
             }
         }
-        stage('Push to DockrHub') {
+        stage('Push to DockerHub') {
             steps {
                 echo 'Push to DockerHub...'
                 sh 'docker push ezraone/ecommerce'
